@@ -361,7 +361,7 @@ export default function PrimePathExport() {
         <div className="container mx-auto px-2 sm:px-4">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              ABOUT US
+            Rooted in Excellence, Growing Global Trust
             </h2>
           </div>
 
@@ -454,7 +454,7 @@ export default function PrimePathExport() {
         <div className="container mx-auto px-2 sm:px-4">
           <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              WHY CHOOSE US
+            Your Strategic Partner for Nigerian Exports
             </h2>
           </div>
 
