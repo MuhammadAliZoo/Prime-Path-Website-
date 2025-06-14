@@ -354,64 +354,64 @@ export default function PrimePathExport() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+      <section id="about" className="py-12 sm:py-20 relative">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               ABOUT US
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="flex flex-col items-center mb-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mb-2">
+          <div className="grid gap-6 sm:gap-12 lg:grid-cols-2 mb-10 sm:mb-16">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300">
+              <div className="flex flex-col items-center mb-2 sm:mb-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mb-1 sm:mb-2">
                   <Target className="w-5 h-5 text-blue-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">OUR MISSION</h3>
+                <h3 className="text-lg sm:text-2xl font-semibold text-center bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">OUR MISSION</h3>
               </div>
-              <p className="text-slate-200 leading-relaxed">
+              <p className="text-slate-200 leading-relaxed text-sm sm:text-base">
                 To bless every corner of the globe with the fruits of nature that Nigeria has to provide of the highest quality, while fostering sustainable trade that benefits local suppliers, communities, and international partners
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="flex flex-col items-center mb-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mb-2">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300">
+              <div className="flex flex-col items-center mb-2 sm:mb-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mb-1 sm:mb-2">
                   <Award className="w-5 h-5 text-blue-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">OUR GOALS</h3>
+                <h3 className="text-lg sm:text-2xl font-semibold text-center bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">OUR GOALS</h3>
               </div>
               <div className="space-y-2">
-                <div className="flex items-center bg-white/5 p-2 rounded-xl hover:bg-white/10 transition-colors group">
+                <div className="flex items-center bg-white/5 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-colors group">
                   <div className="w-6 h-6 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center mr-2 group-hover:scale-110 transition-transform">
                     <Award className="w-4 h-4 text-green-400" />
                   </div>
-                  <span className="text-slate-200">Quality Assurance</span>
+                  <span className="text-slate-200 text-sm sm:text-base">Quality Assurance</span>
                 </div>
-                <div className="flex items-center bg-white/5 p-2 rounded-xl hover:bg-white/10 transition-colors group">
+                <div className="flex items-center bg-white/5 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-colors group">
                   <div className="w-6 h-6 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mr-2 group-hover:scale-110 transition-transform">
                     <Globe className="w-4 h-4 text-blue-400" />
                   </div>
-                  <span className="text-slate-200">Global Reach</span>
+                  <span className="text-slate-200 text-sm sm:text-base">Global Reach</span>
                 </div>
-                <div className="flex items-center bg-white/5 p-2 rounded-xl hover:bg-white/10 transition-colors group">
+                <div className="flex items-center bg-white/5 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-colors group">
                   <div className="w-6 h-6 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center mr-2 group-hover:scale-110 transition-transform">
                     <Leaf className="w-4 h-4 text-green-400" />
                   </div>
-                  <span className="text-slate-200">Sustainable Trading</span>
+                  <span className="text-slate-200 text-sm sm:text-base">Sustainable Trading</span>
                 </div>
-                <div className="flex items-center bg-white/5 p-2 rounded-xl hover:bg-white/10 transition-colors group">
+                <div className="flex items-center bg-white/5 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-colors group">
                   <div className="w-6 h-6 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-xl flex items-center justify-center mr-2 group-hover:scale-110 transition-transform">
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                   </div>
-                  <span className="text-slate-200">Innovation and Leadership</span>
+                  <span className="text-slate-200 text-sm sm:text-base">Innovation and Leadership</span>
                 </div>
-                <div className="flex items-center bg-white/5 p-2 rounded-xl hover:bg-white/10 transition-colors group">
+                <div className="flex items-center bg-white/5 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-colors group">
                   <div className="w-6 h-6 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center mr-2 group-hover:scale-110 transition-transform">
                     <Users className="w-4 h-4 text-blue-400" />
                   </div>
-                  <span className="text-slate-200">Partnership Excellence</span>
+                  <span className="text-slate-200 text-sm sm:text-base">Partnership Excellence</span>
                 </div>
               </div>
             </div>
