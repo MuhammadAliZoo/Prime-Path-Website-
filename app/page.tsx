@@ -226,7 +226,7 @@ export default function PrimePathExport() {
       </svg>
 
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#2C3A64] border-b border-slate-300/20 shadow-[0_2px_12px_0_rgba(44,97,166,0.07)] backdrop-blur-md ${isScrolled ? "shadow-lg" : ""}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#4A6BAF] border-b border-slate-300/20 shadow-[0_2px_12px_0_rgba(44,97,166,0.07)] backdrop-blur-md ${isScrolled ? "shadow-lg" : ""}`}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4 relative" style={{minHeight: '4rem'}}>
           <div className="flex items-center h-16">
             <Image
@@ -831,7 +831,7 @@ export default function PrimePathExport() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#2C3A64] py-16 border-t border-slate-700">
+      <footer className="bg-[#4A6BAF] py-16 border-t border-slate-700">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
