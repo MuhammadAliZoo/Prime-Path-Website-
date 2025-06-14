@@ -156,3 +156,38 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
+
+/* Animated SVG Bubble Background */
+.bubble-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bubble {
+  opacity: 0.3;
+  animation: bubble-float 16s linear infinite;
+}
+.bubble:nth-child(2) { left: 20vw; animation-delay: 2s; animation-duration: 18s; }
+.bubble:nth-child(3) { left: 40vw; animation-delay: 4s; animation-duration: 14s; }
+.bubble:nth-child(4) { left: 60vw; animation-delay: 1s; animation-duration: 20s; }
+.bubble:nth-child(5) { left: 80vw; animation-delay: 3s; animation-duration: 17s; }
+.bubble:nth-child(6) { left: 10vw; animation-delay: 6s; animation-duration: 19s; }
+.bubble:nth-child(7) { left: 70vw; animation-delay: 8s; animation-duration: 15s; }
+
+@keyframes bubble-float {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0.1;
+  }
+}

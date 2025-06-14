@@ -214,13 +214,16 @@ export default function PrimePathExport() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-x-hidden">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-slate-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute -bottom-40 right-1/3 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-x-hidden relative">
+      {/* Animated SVG Bubble Background */}
+      <svg className="bubble-bg" width="100%" height="100%" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle className="bubble" cx="200" cy="800" r="60" fill="#60a5fa" />
+        <circle className="bubble" cx="600" cy="900" r="40" fill="#a5b4fc" />
+        <circle className="bubble" cx="1000" cy="850" r="70" fill="#38bdf8" />
+        <circle className="bubble" cx="300" cy="950" r="30" fill="#818cf8" />
+        <circle className="bubble" cx="1200" cy="950" r="50" fill="#7dd3fc" />
+        <circle className="bubble" cx="800" cy="950" r="35" fill="#bae6fd" />
+      </svg>
 
       {/* Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#2C3A64] border-b border-slate-300/20 shadow-[0_2px_12px_0_rgba(44,97,166,0.07)] backdrop-blur-md ${isScrolled ? "shadow-lg" : ""}`}>
@@ -515,79 +518,79 @@ export default function PrimePathExport() {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-10 sm:py-20 bg-slate-900/50">
-        <div className="container mx-auto px-2 sm:px-4">
-          <div className="text-center mb-8 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+      <section id="certifications" className="py-20 bg-slate-900/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               CERTIFICATIONS
             </h2>
           </div>
 
           {/* Certification Logos */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mb-8 sm:mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="flex flex-col items-center group">
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-4 sm:p-6 mb-2 sm:mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-20 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-full p-6 mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-32 h-32 flex items-center justify-center">
                 <Image
                   src="/images/nepc-logo.png"
                   alt="NEPC Certification"
-                  width={60}
-                  height={60}
-                  className="w-12 h-12 sm:w-20 sm:h-20 object-contain"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-sm sm:text-lg font-semibold text-center">NEPC</h3>
-              <p className="text-xs sm:text-sm text-slate-400 text-center">Export Certification</p>
+              <h3 className="text-lg font-semibold text-center">NEPC</h3>
+              <p className="text-sm text-slate-400 text-center">Export Certification</p>
             </div>
 
             <div className="flex flex-col items-center group">
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-4 sm:p-6 mb-2 sm:mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-20 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-full p-6 mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-32 h-32 flex items-center justify-center">
                 <Image
                   src="/images/halal-logo.png"
                   alt="Halal Certification"
-                  width={60}
-                  height={60}
-                  className="w-12 h-12 sm:w-20 sm:h-20 object-contain"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-sm sm:text-lg font-semibold text-center">Halal</h3>
-              <p className="text-xs sm:text-sm text-slate-400 text-center">Product Certification</p>
+              <h3 className="text-lg font-semibold text-center">Halal</h3>
+              <p className="text-sm text-slate-400 text-center">Product Certification</p>
             </div>
 
             <div className="flex flex-col items-center group">
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-4 sm:p-6 mb-2 sm:mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-20 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-full p-6 mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-32 h-32 flex items-center justify-center">
                 <Image
                   src="/images/naccima-logo.png"
                   alt="NACCIMA Membership"
-                  width={60}
-                  height={60}
-                  className="w-12 h-12 sm:w-20 sm:h-20 object-contain"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-sm sm:text-lg font-semibold text-center">NACCIMA</h3>
-              <p className="text-xs sm:text-sm text-slate-400 text-center">Chamber Membership</p>
+              <h3 className="text-lg font-semibold text-center">NACCIMA</h3>
+              <p className="text-sm text-slate-400 text-center">Chamber Membership</p>
             </div>
 
             <div className="flex flex-col items-center group">
-              <div className="bg-white/10 backdrop-blur-md rounded-full p-4 sm:p-6 mb-2 sm:mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-20 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-full p-6 mb-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 w-32 h-32 flex items-center justify-center">
                 <Image
                   src="/images/cac-logo.png"
                   alt="CAC Registration"
-                  width={60}
-                  height={60}
-                  className="w-12 h-12 sm:w-20 sm:h-20 object-contain"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-sm sm:text-lg font-semibold text-center">CAC</h3>
-              <p className="text-xs sm:text-sm text-slate-400 text-center">Corporate Registration</p>
+              <h3 className="text-lg font-semibold text-center">CAC</h3>
+              <p className="text-sm text-slate-400 text-center">Corporate Registration</p>
             </div>
           </div>
 
           {/* Download Certificates Section */}
-          <div className="text-center mb-8 sm:mb-0">
-            <div className="relative inline-block w-full max-w-xs sm:max-w-full">
+          <div className="text-center">
+            <div className="relative inline-block">
               <Button
                 onClick={() => setSelectedCertificate(selectedCertificate ? null : "dropdown")}
-                className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white w-full px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 flex flex-col items-center"
+                className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 flex flex-col items-center"
               >
                 <Download className="w-5 h-5 mb-1" />
                 <span>Download Certificates</span>
@@ -595,10 +598,10 @@ export default function PrimePathExport() {
 
               {/* Dropdown Menu */}
               {selectedCertificate === "dropdown" && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 sm:w-80 bg-slate-800 border border-slate-600 rounded-lg shadow-2xl z-50">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-slate-800 border border-slate-600 rounded-lg shadow-2xl z-50">
                   <div className="p-4">
-                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-4 text-center">Select Certificate to Download</h3>
-                    <div className="space-y-2 sm:space-y-3">
+                    <h3 className="text-lg font-semibold mb-4 text-center">Select Certificate to Download</h3>
+                    <div className="space-y-3">
                       {certificates.map((cert) => (
                         <button
                           key={cert.id}
@@ -606,11 +609,11 @@ export default function PrimePathExport() {
                             handleDownload(cert.pdfUrl, `${cert.id}-certificate.pdf`)
                             setSelectedCertificate(null)
                           }}
-                          className="w-full flex items-center justify-between p-2 sm:p-3 bg-slate-700/50 hover:bg-slate-700 rounded-lg transition-all duration-200 text-left"
+                          className="w-full flex items-center justify-between p-3 bg-slate-700/50 hover:bg-slate-700 rounded-lg transition-all duration-200 text-left"
                         >
                           <div>
-                            <div className="font-medium text-sm sm:text-base">{cert.name}</div>
-                            <div className="text-xs sm:text-sm text-slate-400">PDF Document</div>
+                            <div className="font-medium">{cert.name}</div>
+                            <div className="text-sm text-slate-400">PDF Document</div>
                           </div>
                           <Download className="w-4 h-4 text-blue-400" />
                         </button>
@@ -618,7 +621,7 @@ export default function PrimePathExport() {
                     </div>
                     <button
                       onClick={() => setSelectedCertificate(null)}
-                      className="w-full mt-3 sm:mt-4 p-2 text-slate-400 hover:text-white transition-colors text-sm sm:text-base"
+                      className="w-full mt-4 p-2 text-slate-400 hover:text-white transition-colors"
                     >
                       Cancel
                     </button>
@@ -630,10 +633,10 @@ export default function PrimePathExport() {
 
           {/* Certificate Modal for Viewing */}
           {selectedCertificate && selectedCertificate !== "dropdown" && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-sm">
-              <div className="bg-slate-800 rounded-lg max-w-xs sm:max-w-4xl w-full max-h-[90vh] overflow-auto">
-                <div className="flex items-center justify-between p-4 sm:p-6 border-b border-slate-700">
-                  <h2 className="text-base sm:text-xl font-semibold text-white">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+              <div className="bg-slate-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+                <div className="flex items-center justify-between p-6 border-b border-slate-700">
+                  <h2 className="text-xl font-semibold text-white">
                     {certificates.find((c) => c.id === selectedCertificate)?.name || ''}
                   </h2>
                   <Button
@@ -645,17 +648,17 @@ export default function PrimePathExport() {
                     <X className="w-5 h-5" />
                   </Button>
                 </div>
-                <div className="p-4 sm:p-6">
+                <div className="p-6">
                   <div className="flex flex-col items-center">
                     <Image
                       src={certificates.find((c) => c.id === selectedCertificate)?.previewImage || "/placeholder.svg"}
                       alt={certificates.find((c) => c.id === selectedCertificate)?.name || ''}
-                      width={400}
-                      height={300}
-                      className="w-full h-auto object-contain rounded-md mb-3 sm:mb-4"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-contain rounded-md mb-4"
                     />
                     <Button
-                      className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white transition-all duration-300 text-sm sm:text-base"
+                      className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white transition-all duration-300"
                       onClick={() => {
                         const cert = certificates.find((c) => c.id === selectedCertificate)
                         if (cert) {
@@ -672,7 +675,7 @@ export default function PrimePathExport() {
             </div>
           )}
 
-          <p className="text-center text-slate-300 max-w-xs sm:max-w-4xl mx-auto leading-relaxed mt-8 sm:mt-12 text-xs sm:text-base">
+          <p className="text-center text-slate-300 max-w-4xl mx-auto leading-relaxed mt-12">
             This section provides information about our certifications and export compliance.
           </p>
         </div>
