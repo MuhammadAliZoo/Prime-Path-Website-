@@ -333,11 +333,11 @@ export default function PrimePathExport() {
           <p className="text-base xs:text-lg md:text-xl mb-8 sm:mb-12 max-w-2xl sm:max-w-4xl mx-auto text-slate-100 leading-relaxed drop-shadow-md bg-slate-900/20 backdrop-blur-sm rounded-lg p-4 sm:p-6">
             Premium Nigerian Exports to Global Markets. Connecting Nigeria's finest products to international buyers worldwide. From source to your doorstep, we deliver quality Nigerian goods with uncompromising reliability and efficiency.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full max-w-xs sm:max-w-2xl mx-auto">
             <Button
               onClick={() => scrollToSection("products")}
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Explore Our Products
             </Button>
@@ -345,7 +345,7 @@ export default function PrimePathExport() {
               onClick={() => scrollToSection("contact")}
               variant="outline"
               size="lg"
-              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-slate-900/20 shadow-2xl"
+              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-slate-900/20 shadow-2xl"
             >
               Get Quote Now
             </Button>
