@@ -234,7 +234,7 @@ export default function PrimePathExport() {
               alt="Prime Path Export"
               width={380}
               height={140}
-              className="h-28 w-auto drop-shadow-[0_0_32px_rgba(255,255,255,0.7)] drop-shadow-[0_0_100px_rgba(59,130,246,0.5)] brightness-200 contrast-150"
+              className="h-28 w-auto brightness-200 contrast-150"
               priority
             />
           </div>
@@ -842,7 +842,7 @@ export default function PrimePathExport() {
                   alt="Prime Path Export"
                   width={380}
                   height={140}
-                  className="h-28 w-auto drop-shadow-[0_0_32px_rgba(255,255,255,0.7)] drop-shadow-[0_0_100px_rgba(59,130,246,0.5)] brightness-200 contrast-150"
+                  className="h-28 w-auto brightness-200 contrast-150"
                 />
               </div>
               <p className="text-slate-300 mb-6 leading-relaxed">
