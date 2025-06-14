@@ -418,28 +418,28 @@ export default function PrimePathExport() {
           </div>
 
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-semibold mb-8 flex items-center justify-center">
+            <h3 className="text-xl sm:text-3xl font-semibold mb-6 sm:mb-8 flex items-center justify-center">
               <Handshake className="w-8 h-8 text-blue-400 mr-3" />
               MEET THE FOUNDERS
             </h3>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-8 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 sm:gap-8 justify-center">
             {founders.map((founder, index) => (
               <div
                 key={index}
-                className="bg-slate-800/30 backdrop-blur-md border border-slate-700 rounded-lg p-6 text-center hover:bg-slate-800/40 transition-all duration-300 transform hover:scale-105"
+                className="bg-slate-800/30 backdrop-blur-md border border-slate-700 rounded-lg p-4 sm:p-6 text-center hover:bg-slate-800/40 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-slate-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500 to-slate-600 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                  <span className="text-lg sm:text-2xl font-bold">
                     {founder.name
                       .split(" ")
                       .map((n) => n[0])
                       .join("")}
                   </span>
                 </div>
-                <h4 className="text-xl font-semibold mb-2">{founder.name}</h4>
-                <p className="text-blue-400">{founder.title}</p>
+                <h4 className="text-base sm:text-xl font-semibold mb-1 sm:mb-2">{founder.name}</h4>
+                <p className="text-blue-400 text-sm sm:text-base">{founder.title}</p>
               </div>
             ))}
           </div>
@@ -474,39 +474,39 @@ export default function PrimePathExport() {
       <section id="products" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               OUR PRODUCTS
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4">
-            <div className="flex space-x-6 min-w-max">
+          <div className="overflow-x-auto pb-2 sm:pb-4">
+            <div className="flex space-x-3 sm:space-x-6 min-w-max">
               {products.map((product, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/30 backdrop-blur-md border border-slate-700 rounded-lg p-6 w-80 flex-shrink-0 shadow-md transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                  className="bg-slate-800/30 backdrop-blur-md border border-slate-700 rounded-lg p-4 sm:p-6 w-64 sm:w-80 flex-shrink-0 shadow-md transition-all duration-300 hover:shadow-2xl hover:scale-105"
                 >
-                  <div className="relative overflow-hidden rounded-lg mb-4 group bg-white/5 p-4">
+                  <div className="relative overflow-hidden rounded-lg mb-3 sm:mb-4 group bg-white/5 p-2 sm:p-4">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-48 object-contain transition-transform duration-300 group-hover:scale-110"
+                      width={220}
+                      height={220}
+                      className="w-full h-32 sm:h-48 object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{product.name}</h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">{product.description}</p>
+                  <h3 className="text-base sm:text-xl font-semibold mb-2 sm:mb-3">{product.name}</h3>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">{product.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Button
               onClick={() => scrollToSection("contact")}
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
             >
               Make Enquiries
             </Button>
