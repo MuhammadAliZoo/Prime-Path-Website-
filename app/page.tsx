@@ -317,20 +317,20 @@ export default function PrimePathExport() {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent drop-shadow-lg leading-tight">
             FROM NATURE TO YOUR HANDS
           </h1>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-blue-300 drop-shadow-md">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 sm:mb-4 text-blue-300 drop-shadow-md leading-snug">
             EXCELLENCE IN EVERY SHIPMENT!
           </h2>
-          <div className="text-lg md:text-xl mb-8 text-slate-200 flex items-center justify-center space-x-4 drop-shadow-md">
-            <span className="bg-slate-900/30 px-3 py-1 rounded-full backdrop-blur-sm">EFFICIENT</span>
+          <div className="text-base xs:text-lg md:text-xl mb-6 sm:mb-8 text-slate-200 flex flex-wrap items-center justify-center gap-2 sm:space-x-4 drop-shadow-md">
+            <span className="bg-slate-900/30 px-2 sm:px-3 py-1 rounded-full backdrop-blur-sm">EFFICIENT</span>
             <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-            <span className="bg-slate-900/30 px-3 py-1 rounded-full backdrop-blur-sm">RELIABLE</span>
+            <span className="bg-slate-900/30 px-2 sm:px-3 py-1 rounded-full backdrop-blur-sm">RELIABLE</span>
             <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-            <span className="bg-slate-900/30 px-3 py-1 rounded-full backdrop-blur-sm">SOLUTIONS</span>
+            <span className="bg-slate-900/30 px-2 sm:px-3 py-1 rounded-full backdrop-blur-sm">SOLUTIONS</span>
           </div>
-          <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto text-slate-100 leading-relaxed drop-shadow-md bg-slate-900/20 backdrop-blur-sm rounded-lg p-6">
+          <p className="text-base xs:text-lg md:text-xl mb-8 sm:mb-12 max-w-2xl sm:max-w-4xl mx-auto text-slate-100 leading-relaxed drop-shadow-md bg-slate-900/20 backdrop-blur-sm rounded-lg p-4 sm:p-6">
             Premium Nigerian Exports to Global Markets. Connecting Nigeria's finest products to international buyers worldwide. From source to your doorstep, we deliver quality Nigerian goods with uncompromising reliability and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
