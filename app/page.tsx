@@ -224,7 +224,7 @@ export default function PrimePathExport() {
 
       {/* Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#2C3A64] border-b border-slate-300/20 shadow-[0_2px_12px_0_rgba(44,97,166,0.07)] backdrop-blur-md ${isScrolled ? "shadow-lg" : ""}`}>
-        <div className="container mx-auto px-4 py-3 flex items-center gap-4 relative" style={{minHeight: '4rem'}}>
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4 relative" style={{minHeight: '4rem'}}>
           <div className="flex items-center h-16">
             <Image
               src="/images/prime-path-logo.png"
@@ -256,7 +256,7 @@ export default function PrimePathExport() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden p-2">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden p-2 ml-auto">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
