@@ -447,23 +447,23 @@ export default function PrimePathExport() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-us" className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+      <section id="why-us" className="py-10 sm:py-20 bg-slate-900/50">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-8 sm:mb-16">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               WHY CHOOSE US
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-4 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="bg-slate-800/30 backdrop-blur-md border border-slate-700 rounded-lg p-8 text-center hover:bg-slate-800/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2"
+                className="bg-slate-800/30 backdrop-blur-md border border-slate-700 rounded-lg p-4 sm:p-8 text-center hover:bg-slate-800/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2"
               >
-                <div className="text-blue-400 mb-4 flex justify-center">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                <p className="text-slate-300">{item.description}</p>
+                <div className="text-blue-400 mb-2 sm:mb-4 flex justify-center">{item.icon}</div>
+                <h3 className="text-base sm:text-xl font-semibold mb-2 sm:mb-4">{item.title}</h3>
+                <p className="text-slate-300 text-sm sm:text-base">{item.description}</p>
               </div>
             ))}
           </div>
@@ -679,31 +679,31 @@ export default function PrimePathExport() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-[#1a2240] via-[#232f5c] to-[#2C3A64] relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+      <section id="contact" className="py-10 sm:py-20 bg-gradient-to-br from-[#1a2240] via-[#232f5c] to-[#2C3A64] relative overflow-hidden">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="text-center mb-8 sm:mb-16">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               CONTACT US
             </h2>
           </div>
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="grid gap-8 lg:grid-cols-2 items-stretch">
             {/* Contact Form */}
-            <div className="glassmorphism-card border-2 border-blue-500/40 shadow-xl rounded-3xl p-10 flex flex-col justify-center">
-              <form className="space-y-8" onSubmit={handleContactSubmit}>
-                <div className="grid md:grid-cols-2 gap-6">
+            <div className="glassmorphism-card border-2 border-blue-500/40 shadow-xl rounded-3xl p-4 sm:p-10 flex flex-col justify-center">
+              <form className="space-y-6 sm:space-y-8" onSubmit={handleContactSubmit}>
+                <div className="grid gap-4 md:grid-cols-2 md:gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Full Name *</label>
+                    <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Full Name *</label>
                     <Input value={name} onChange={e => setName(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white rounded-xl" required />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Company Name</label>
+                    <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Company Name</label>
                     <Input value={company} onChange={e => setCompany(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white rounded-xl" />
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid gap-4 md:grid-cols-2 md:gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Country</label>
-                    <select value={country} onChange={e => setCountry(e.target.value)} className="w-full bg-slate-700/40 border border-blue-500/30 text-white rounded-xl px-3 py-2 appearance-none text-base focus:outline-none">
+                    <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Country</label>
+                    <select value={country} onChange={e => setCountry(e.target.value)} className="w-full bg-slate-700/40 border border-blue-500/30 text-white rounded-xl px-3 py-2 appearance-none text-xs sm:text-base focus:outline-none">
                       <option value="">Select a Country</option>
                       {countries.map((c) => (
                         <option key={c} value={c}>{c}</option>
@@ -711,15 +711,15 @@ export default function PrimePathExport() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email Address *</label>
+                    <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Email Address *</label>
                     <Input type="email" value={email} onChange={e => setEmail(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white rounded-xl" required />
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid gap-4 md:grid-cols-2 md:gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone Number</label>
+                    <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Phone Number</label>
                     <div className="flex">
-                      <select value={countryCode} onChange={e => setCountryCode(e.target.value)} className="bg-slate-700/40 border border-blue-500/30 text-white rounded-l-xl px-2 py-2 focus:outline-none appearance-none text-base">
+                      <select value={countryCode} onChange={e => setCountryCode(e.target.value)} className="bg-slate-700/40 border border-blue-500/30 text-white rounded-l-xl px-2 py-2 focus:outline-none appearance-none text-xs sm:text-base">
                         <option value="+234">🇳🇬 +234</option>
                         <option value="+44">🇬🇧 +44</option>
                         <option value="+1">🇺🇸 +1</option>
@@ -736,8 +736,8 @@ export default function PrimePathExport() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Product of Interest</label>
-                    <select value={product} onChange={e => setProduct(e.target.value)} className="w-full bg-slate-700/40 border border-blue-500/30 text-white rounded-xl px-3 py-2 appearance-none text-base focus:outline-none">
+                    <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Product of Interest</label>
+                    <select value={product} onChange={e => setProduct(e.target.value)} className="w-full bg-slate-700/40 border border-blue-500/30 text-white rounded-xl px-3 py-2 appearance-none text-xs sm:text-base focus:outline-none">
                       <option value="">Select a Product</option>
                       {products.map((product) => (
                         <option key={product.name} value={product.name}>
@@ -748,16 +748,16 @@ export default function PrimePathExport() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Order Quantity</label>
+                  <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Order Quantity</label>
                   <Input value={quantity} onChange={e => setQuantity(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white rounded-xl" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message *</label>
-                  <Textarea value={message} onChange={e => setMessage(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white h-32 rounded-xl" required />
+                  <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Message *</label>
+                  <Textarea value={message} onChange={e => setMessage(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white h-24 sm:h-32 rounded-xl" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Preferred Contact Method</label>
-                  <select value={contactMethod} onChange={e => setContactMethod(e.target.value)} className="w-full bg-slate-700/40 border border-blue-500/30 text-white rounded-xl px-3 py-2 appearance-none text-base focus:outline-none">
+                  <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Preferred Contact Method</label>
+                  <select value={contactMethod} onChange={e => setContactMethod(e.target.value)} className="w-full bg-slate-700/40 border border-blue-500/30 text-white rounded-xl px-3 py-2 appearance-none text-xs sm:text-base focus:outline-none">
                     <option value="">Select Contact Method</option>
                     <option value="email">Email</option>
                     <option value="phone">Phone</option>
@@ -767,7 +767,7 @@ export default function PrimePathExport() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
                   disabled={loading}
                 >
                   {loading ? "Sending..." : "Send Message"}
@@ -775,48 +775,48 @@ export default function PrimePathExport() {
               </form>
             </div>
             {/* Contact Information */}
-            <div className="space-y-8 flex flex-col justify-center">
-              <div className="glassmorphism-card border-2 border-blue-400/40 shadow-xl rounded-3xl p-10">
-                <h3 className="text-xl font-semibold mb-6 text-blue-200">BUSINESS HOURS</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <Clock className="w-6 h-6 text-blue-400" />
-                    <span className="text-lg">Mon–Fri: 8am–7pm GMT</span>
+            <div className="space-y-6 sm:space-y-8 flex flex-col justify-center">
+              <div className="glassmorphism-card border-2 border-blue-400/40 shadow-xl rounded-3xl p-4 sm:p-10">
+                <h3 className="text-base sm:text-xl font-semibold mb-4 sm:mb-6 text-blue-200">BUSINESS HOURS</h3>
+                <div className="space-y-2 sm:space-y-4">
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+                    <span className="text-sm sm:text-lg">Mon–Fri: 8am–7pm GMT</span>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <Clock className="w-6 h-6 text-blue-400" />
-                    <span className="text-lg">Sat 9am–3pm GMT</span>
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
+                    <span className="text-sm sm:text-lg">Sat 9am–3pm GMT</span>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <MessageCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">24/7 WhatsApp Support</span>
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
+                    <span className="text-sm sm:text-lg">24/7 WhatsApp Support</span>
                   </div>
                 </div>
               </div>
-              <div className="glassmorphism-card border-2 border-blue-400/40 shadow-xl rounded-3xl p-10">
-                <h3 className="text-xl font-semibold mb-6 text-blue-200">CONTACT INFORMATION</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <Phone className="w-6 h-6 text-cyan-400" />
-                    <span className="text-lg">+234 810 040 4900</span>
+              <div className="glassmorphism-card border-2 border-blue-400/40 shadow-xl rounded-3xl p-4 sm:p-10">
+                <h3 className="text-base sm:text-xl font-semibold mb-4 sm:mb-6 text-blue-200">CONTACT INFORMATION</h3>
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
+                    <span className="text-sm sm:text-lg">+234 810 040 4900</span>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <MessageCircle className="w-6 h-6 text-green-400" />
-                    <a href="https://wa.me/2349126629289" target="_blank" rel="noopener noreferrer" className="underline text-white hover:opacity-80 transition-opacity">+234 912 662 9289 (WhatsApp)</a>
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
+                    <a href="https://wa.me/2349126629289" target="_blank" rel="noopener noreferrer" className="underline text-white hover:opacity-80 transition-opacity text-sm sm:text-lg">+234 912 662 9289 (WhatsApp)</a>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <Mail className="w-6 h-6 text-cyan-400" />
-                    <a href="mailto:primepathexport@gmail.com" className="underline text-white hover:opacity-80 transition-opacity">primepathexport@gmail.com</a>
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
+                    <a href="mailto:primepathexport@gmail.com" className="underline text-white hover:opacity-80 transition-opacity text-sm sm:text-lg">primepathexport@gmail.com</a>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-pink-400 mt-1" />
-                    <a href="https://maps.app.goo.gl/xybrjRG6DwBifHQ59?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="underline text-white hover:opacity-80 transition-opacity">698, PLOT 698, CAD ZONE, AMAC, ABUJA, FCT, Nigeria</a>
+                  <div className="flex items-start gap-2 sm:gap-4">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-pink-400 mt-1" />
+                    <a href="https://maps.app.goo.gl/xybrjRG6DwBifHQ59?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="underline text-white hover:opacity-80 transition-opacity text-sm sm:text-lg">698, PLOT 698, CAD ZONE, AMAC, ABUJA, FCT, Nigeria</a>
                   </div>
                 </div>
               </div>
               <Button
                 size="lg"
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 flex flex-col items-center"
+                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 flex flex-col items-center"
                 onClick={() => window.open('https://wa.me/2349126629289', '_blank', 'noopener,noreferrer')}
               >
                 <MessageCircle className="w-5 h-5 mb-1" />
