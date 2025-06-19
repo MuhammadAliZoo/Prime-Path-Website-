@@ -213,6 +213,250 @@ export default function PrimePathExport() {
     "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)", "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (fmr. Swaziland)", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (formerly Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
   ]
 
+  // List of all country codes with flags
+  const countryCodes = [
+    { code: "+93", name: "Afghanistan", flag: "🇦🇫" },
+    { code: "+355", name: "Albania", flag: "🇦🇱" },
+    { code: "+213", name: "Algeria", flag: "🇩🇿" },
+    { code: "+1-684", name: "American Samoa", flag: "🇦🇸" },
+    { code: "+376", name: "Andorra", flag: "🇦🇩" },
+    { code: "+244", name: "Angola", flag: "🇦🇴" },
+    { code: "+1-264", name: "Anguilla", flag: "🇦🇮" },
+    { code: "+672", name: "Antarctica", flag: "🇦🇶" },
+    { code: "+1-268", name: "Antigua and Barbuda", flag: "🇦🇬" },
+    { code: "+54", name: "Argentina", flag: "🇦🇷" },
+    { code: "+374", name: "Armenia", flag: "🇦🇲" },
+    { code: "+297", name: "Aruba", flag: "🇦🇼" },
+    { code: "+61", name: "Australia", flag: "🇦🇺" },
+    { code: "+43", name: "Austria", flag: "🇦🇹" },
+    { code: "+994", name: "Azerbaijan", flag: "🇦🇿" },
+    { code: "+1-242", name: "Bahamas", flag: "🇧🇸" },
+    { code: "+973", name: "Bahrain", flag: "🇧🇭" },
+    { code: "+880", name: "Bangladesh", flag: "🇧🇩" },
+    { code: "+1-246", name: "Barbados", flag: "🇧🇧" },
+    { code: "+375", name: "Belarus", flag: "🇧🇾" },
+    { code: "+32", name: "Belgium", flag: "🇧🇪" },
+    { code: "+501", name: "Belize", flag: "🇧🇿" },
+    { code: "+229", name: "Benin", flag: "🇧🇯" },
+    { code: "+1-441", name: "Bermuda", flag: "🇧🇲" },
+    { code: "+975", name: "Bhutan", flag: "🇧🇹" },
+    { code: "+591", name: "Bolivia", flag: "🇧🇴" },
+    { code: "+387", name: "Bosnia and Herzegovina", flag: "🇧🇦" },
+    { code: "+267", name: "Botswana", flag: "🇧🇼" },
+    { code: "+55", name: "Brazil", flag: "🇧🇷" },
+    { code: "+246", name: "British Indian Ocean Territory", flag: "🇮🇴" },
+    { code: "+1-284", name: "British Virgin Islands", flag: "🇻🇬" },
+    { code: "+673", name: "Brunei", flag: "🇧🇳" },
+    { code: "+359", name: "Bulgaria", flag: "🇧🇬" },
+    { code: "+226", name: "Burkina Faso", flag: "🇧🇫" },
+    { code: "+257", name: "Burundi", flag: "🇧🇮" },
+    { code: "+855", name: "Cambodia", flag: "🇰🇭" },
+    { code: "+237", name: "Cameroon", flag: "🇨🇲" },
+    { code: "+1", name: "Canada", flag: "🇨🇦" },
+    { code: "+238", name: "Cape Verde", flag: "🇨🇻" },
+    { code: "+1-345", name: "Cayman Islands", flag: "🇰🇾" },
+    { code: "+236", name: "Central African Republic", flag: "🇨🇫" },
+    { code: "+235", name: "Chad", flag: "🇹🇩" },
+    { code: "+56", name: "Chile", flag: "🇨🇱" },
+    { code: "+86", name: "China", flag: "🇨🇳" },
+    { code: "+61", name: "Christmas Island", flag: "🇨🇽" },
+    { code: "+61", name: "Cocos Islands", flag: "🇨🇨" },
+    { code: "+57", name: "Colombia", flag: "🇨🇴" },
+    { code: "+269", name: "Comoros", flag: "🇰🇲" },
+    { code: "+682", name: "Cook Islands", flag: "🇨🇰" },
+    { code: "+506", name: "Costa Rica", flag: "🇨🇷" },
+    { code: "+385", name: "Croatia", flag: "🇭🇷" },
+    { code: "+53", name: "Cuba", flag: "🇨🇺" },
+    { code: "+599", name: "Curacao", flag: "🇨🇼" },
+    { code: "+357", name: "Cyprus", flag: "🇨🇾" },
+    { code: "+420", name: "Czech Republic", flag: "🇨🇿" },
+    { code: "+243", name: "Democratic Republic of the Congo", flag: "🇨🇩" },
+    { code: "+45", name: "Denmark", flag: "🇩🇰" },
+    { code: "+253", name: "Djibouti", flag: "🇩🇯" },
+    { code: "+1-767", name: "Dominica", flag: "🇩🇲" },
+    { code: "+1-809", name: "Dominican Republic", flag: "🇩🇴" },
+    { code: "+670", name: "East Timor", flag: "🇹🇱" },
+    { code: "+593", name: "Ecuador", flag: "🇪🇨" },
+    { code: "+20", name: "Egypt", flag: "🇪🇬" },
+    { code: "+503", name: "El Salvador", flag: "🇸🇻" },
+    { code: "+240", name: "Equatorial Guinea", flag: "🇬🇶" },
+    { code: "+291", name: "Eritrea", flag: "🇪🇷" },
+    { code: "+372", name: "Estonia", flag: "🇪🇪" },
+    { code: "+251", name: "Ethiopia", flag: "🇪🇹" },
+    { code: "+500", name: "Falkland Islands", flag: "🇫🇰" },
+    { code: "+298", name: "Faroe Islands", flag: "🇫🇴" },
+    { code: "+679", name: "Fiji", flag: "🇫🇯" },
+    { code: "+358", name: "Finland", flag: "🇫🇮" },
+    { code: "+33", name: "France", flag: "🇫🇷" },
+    { code: "+594", name: "French Guiana", flag: "🇬🇾" },
+    { code: "+689", name: "French Polynesia", flag: "🇵🇫" },
+    { code: "+241", name: "Gabon", flag: "🇬🇦" },
+    { code: "+220", name: "Gambia", flag: "🇬🇲" },
+    { code: "+995", name: "Georgia", flag: "🇬🇪" },
+    { code: "+49", name: "Germany", flag: "🇩🇪" },
+    { code: "+233", name: "Ghana", flag: "🇬🇭" },
+    { code: "+350", name: "Gibraltar", flag: "🇬🇮" },
+    { code: "+30", name: "Greece", flag: "🇬🇷" },
+    { code: "+299", name: "Greenland", flag: "🇬🇱" },
+    { code: "+1-473", name: "Grenada", flag: "🇬🇩" },
+    { code: "+590", name: "Guadeloupe", flag: "🇬🇵" },
+    { code: "+1-671", name: "Guam", flag: "🇬🇼" },
+    { code: "+502", name: "Guatemala", flag: "🇬🇹" },
+    { code: "+224", name: "Guinea", flag: "🇬🇳" },
+    { code: "+245", name: "Guinea-Bissau", flag: "🇬🇼" },
+    { code: "+592", name: "Guyana", flag: "🇬🇾" },
+    { code: "+509", name: "Haiti", flag: "🇭🇹" },
+    { code: "+504", name: "Honduras", flag: "🇭🇳" },
+    { code: "+852", name: "Hong Kong", flag: "🇭🇰" },
+    { code: "+36", name: "Hungary", flag: "🇭🇺" },
+    { code: "+354", name: "Iceland", flag: "🇮🇸" },
+    { code: "+91", name: "India", flag: "🇮🇳" },
+    { code: "+62", name: "Indonesia", flag: "🇮🇩" },
+    { code: "+98", name: "Iran", flag: "🇮🇷" },
+    { code: "+964", name: "Iraq", flag: "🇮🇶" },
+    { code: "+353", name: "Ireland", flag: "🇮🇪" },
+    { code: "+972", name: "Israel", flag: "🇮🇱" },
+    { code: "+39", name: "Italy", flag: "🇮🇹" },
+    { code: "+225", name: "Ivory Coast", flag: "🇨🇮" },
+    { code: "+1-876", name: "Jamaica", flag: "🇯🇲" },
+    { code: "+81", name: "Japan", flag: "🇯🇵" },
+    { code: "+962", name: "Jordan", flag: "🇯🇴" },
+    { code: "+7", name: "Kazakhstan", flag: "🇰🇿" },
+    { code: "+254", name: "Kenya", flag: "🇰🇪" },
+    { code: "+686", name: "Kiribati", flag: "🇰🇮" },
+    { code: "+383", name: "Kosovo", flag: "🇽🇰" },
+    { code: "+965", name: "Kuwait", flag: "🇰🇼" },
+    { code: "+996", name: "Kyrgyzstan", flag: "🇰🇾" },
+    { code: "+856", name: "Laos", flag: "🇱🇦" },
+    { code: "+371", name: "Latvia", flag: "🇱🇻" },
+    { code: "+961", name: "Lebanon", flag: "🇱🇧" },
+    { code: "+266", name: "Lesotho", flag: "🇱🇸" },
+    { code: "+231", name: "Liberia", flag: "🇱🇷" },
+    { code: "+218", name: "Libya", flag: "🇱🇾" },
+    { code: "+423", name: "Liechtenstein", flag: "🇱🇮" },
+    { code: "+370", name: "Lithuania", flag: "🇱🇹" },
+    { code: "+352", name: "Luxembourg", flag: "🇱🇺" },
+    { code: "+853", name: "Macau", flag: "🇲🇴" },
+    { code: "+389", name: "Macedonia", flag: "🇲🇰" },
+    { code: "+261", name: "Madagascar", flag: "🇲🇬" },
+    { code: "+265", name: "Malawi", flag: "🇲🇼" },
+    { code: "+60", name: "Malaysia", flag: "🇲🇾" },
+    { code: "+960", name: "Maldives", flag: "🇲🇻" },
+    { code: "+223", name: "Mali", flag: "🇲🇱" },
+    { code: "+356", name: "Malta", flag: "🇲🇹" },
+    { code: "+692", name: "Marshall Islands", flag: "🇲🇭" },
+    { code: "+596", name: "Martinique", flag: "🇲🇶" },
+    { code: "+222", name: "Mauritania", flag: "🇲🇷" },
+    { code: "+230", name: "Mauritius", flag: "🇲🇺" },
+    { code: "+262", name: "Mayotte", flag: "🇾🇹" },
+    { code: "+52", name: "Mexico", flag: "🇲🇽" },
+    { code: "+691", name: "Micronesia", flag: "🇫🇲" },
+    { code: "+373", name: "Moldova", flag: "🇲🇩" },
+    { code: "+377", name: "Monaco", flag: "🇲🇨" },
+    { code: "+976", name: "Mongolia", flag: "🇲🇳" },
+    { code: "+382", name: "Montenegro", flag: "🇲🇪" },
+    { code: "+1-664", name: "Montserrat", flag: "🇲🇸" },
+    { code: "+212", name: "Morocco", flag: "🇲🇷" },
+    { code: "+258", name: "Mozambique", flag: "🇲🇿" },
+    { code: "+95", name: "Myanmar", flag: "🇲🇲" },
+    { code: "+264", name: "Namibia", flag: "🇳🇦" },
+    { code: "+674", name: "Nauru", flag: "🇳🇷" },
+    { code: "+977", name: "Nepal", flag: "🇳🇵" },
+    { code: "+31", name: "Netherlands", flag: "🇳🇱" },
+    { code: "+599", name: "Netherlands Antilles", flag: "🇳🇱" },
+    { code: "+687", name: "New Caledonia", flag: "🇳🇨" },
+    { code: "+64", name: "New Zealand", flag: "🇳🇿" },
+    { code: "+505", name: "Nicaragua", flag: "🇳🇮" },
+    { code: "+227", name: "Niger", flag: "🇳🇪" },
+    { code: "+234", name: "Nigeria", flag: "🇳🇬" },
+    { code: "+683", name: "Niue", flag: "🇳🇺" },
+    { code: "+672", name: "Norfolk Island", flag: "🇳🇫" },
+    { code: "+850", name: "North Korea", flag: "🇰🇵" },
+    { code: "+1-670", name: "Northern Mariana Islands", flag: "🇲🇵" },
+    { code: "+47", name: "Norway", flag: "🇳🇴" },
+    { code: "+968", name: "Oman", flag: "🇴🇲" },
+    { code: "+92", name: "Pakistan", flag: "🇵🇰" },
+    { code: "+680", name: "Palau", flag: "🇵🇼" },
+    { code: "+970", name: "Palestine", flag: "🇵🇸" },
+    { code: "+507", name: "Panama", flag: "🇵🇳" },
+    { code: "+675", name: "Papua New Guinea", flag: "🇵🇬" },
+    { code: "+595", name: "Paraguay", flag: "🇵🇾" },
+    { code: "+51", name: "Peru", flag: "🇵🇪" },
+    { code: "+63", name: "Philippines", flag: "🇵🇭" },
+    { code: "+48", name: "Poland", flag: "🇵🇱" },
+    { code: "+351", name: "Portugal", flag: "🇵🇹" },
+    { code: "+1-787", name: "Puerto Rico", flag: "🇵🇷" },
+    { code: "+974", name: "Qatar", flag: "🇶🇦" },
+    { code: "+242", name: "Republic of the Congo", flag: "🇨🇬" },
+    { code: "+262", name: "Reunion", flag: "🇷🇪" },
+    { code: "+40", name: "Romania", flag: "🇷🇴" },
+    { code: "+7", name: "Russia", flag: "🇷🇺" },
+    { code: "+250", name: "Rwanda", flag: "🇷🇼" },
+    { code: "+590", name: "Saint Barthelemy", flag: "🇧🇱" },
+    { code: "+290", name: "Saint Helena", flag: "🇱🇸" },
+    { code: "+1-869", name: "Saint Kitts and Nevis", flag: "🇰🇳" },
+    { code: "+1-758", name: "Saint Lucia", flag: "🇱🇨" },
+    { code: "+590", name: "Saint Martin", flag: "🇲🇶" },
+    { code: "+508", name: "Saint Pierre and Miquelon", flag: "🇵🇲" },
+    { code: "+1-784", name: "Saint Vincent and the Grenadines", flag: "🇻🇨" },
+    { code: "+685", name: "Samoa", flag: "🇼🇸" },
+    { code: "+378", name: "San Marino", flag: "🇸🇲" },
+    { code: "+239", name: "Sao Tome and Principe", flag: "🇸🇹" },
+    { code: "+966", name: "Saudi Arabia", flag: "🇸🇦" },
+    { code: "+221", name: "Senegal", flag: "🇸🇳" },
+    { code: "+381", name: "Serbia", flag: "🇷🇸" },
+    { code: "+248", name: "Seychelles", flag: "🇸🇨" },
+    { code: "+232", name: "Sierra Leone", flag: "🇸🇱" },
+    { code: "+65", name: "Singapore", flag: "🇸🇬" },
+    { code: "+1-721", name: "Sint Maarten", flag: "🇸🇽" },
+    { code: "+421", name: "Slovakia", flag: "🇸🇰" },
+    { code: "+386", name: "Slovenia", flag: "🇸🇮" },
+    { code: "+677", name: "Solomon Islands", flag: "🇼🇸" },
+    { code: "+252", name: "Somalia", flag: "🇸🇴" },
+    { code: "+27", name: "South Africa", flag: "🇿🇦" },
+    { code: "+82", name: "South Korea", flag: "🇰🇷" },
+    { code: "+211", name: "South Sudan", flag: "🇸🇸" },
+    { code: "+34", name: "Spain", flag: "🇪🇸" },
+    { code: "+94", name: "Sri Lanka", flag: "🇱🇰" },
+    { code: "+249", name: "Sudan", flag: "🇸🇩" },
+    { code: "+597", name: "Suriname", flag: "🇸🇷" },
+    { code: "+47", name: "Svalbard and Jan Mayen", flag: "🇳🇴" },
+    { code: "+268", name: "Swaziland", flag: "🇱🇸" },
+    { code: "+46", name: "Sweden", flag: "🇸🇪" },
+    { code: "+41", name: "Switzerland", flag: "🇨🇭" },
+    { code: "+963", name: "Syria", flag: "🇸🇾" },
+    { code: "+886", name: "Taiwan", flag: "🇹🇼" },
+    { code: "+992", name: "Tajikistan", flag: "🇹🇯" },
+    { code: "+255", name: "Tanzania", flag: "🇹🇿" },
+    { code: "+66", name: "Thailand", flag: "🇹🇭" },
+    { code: "+228", name: "Togo", flag: "🇹🇬" },
+    { code: "+690", name: "Tokelau", flag: "🇹🇰" },
+    { code: "+676", name: "Tonga", flag: "🇹🇴" },
+    { code: "+1-868", name: "Trinidad and Tobago", flag: "🇹🇹" },
+    { code: "+216", name: "Tunisia", flag: "🇹🇳" },
+    { code: "+90", name: "Turkey", flag: "🇹🇷" },
+    { code: "+993", name: "Turkmenistan", flag: "🇹🇲" },
+    { code: "+1-649", name: "Turks and Caicos Islands", flag: "🇹🇨" },
+    { code: "+688", name: "Tuvalu", flag: "🇹🇻" },
+    { code: "+256", name: "Uganda", flag: "🇺🇬" },
+    { code: "+380", name: "Ukraine", flag: "🇺🇦" },
+    { code: "+971", name: "United Arab Emirates", flag: "🇦🇪" },
+    { code: "+44", name: "United Kingdom", flag: "🇬🇧" },
+    { code: "+1", name: "United States", flag: "🇺🇸" },
+    { code: "+598", name: "Uruguay", flag: "🇺🇾" },
+    { code: "+998", name: "Uzbekistan", flag: "🇺🇿" },
+    { code: "+678", name: "Vanuatu", flag: "🇻🇺" },
+    { code: "+58", name: "Venezuela", flag: "🇻🇪" },
+    { code: "+84", name: "Vietnam", flag: "🇻🇳" },
+    { code: "+1-284", name: "Virgin Islands, British", flag: "🇻🇬" },
+    { code: "+1-340", name: "Virgin Islands, U.S.", flag: "🇻🇮" },
+    { code: "+681", name: "Wallis and Futuna", flag: "🇼🇫" },
+    { code: "+212", name: "Western Sahara", flag: "🇪🇭" },
+    { code: "+967", name: "Yemen", flag: "🇾🇪" },
+    { code: "+260", name: "Zambia", flag: "🇿🇲" },
+    { code: "+263", name: "Zimbabwe", flag: "🇿🇼" },
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-x-hidden relative">
       {/* Animated SVG Bubble Background */}
@@ -374,7 +618,7 @@ export default function PrimePathExport() {
                 <h3 className="text-lg sm:text-2xl font-semibold text-center bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">OUR MISSION</h3>
               </div>
               <p className="text-slate-200 leading-relaxed text-sm sm:text-base">
-                To bless every corner of the globe with the fruits of nature that Nigeria has to provide of the highest quality, while fostering sustainable trade that benefits local suppliers, communities, and international partners
+                To bless every corner of the globe with the fruits of nature that Nigeria has to provide of the highest quality, while fostering sustainable trade that benefits local suppliers, communities, and international partners.
               </p>
             </div>
 
@@ -723,17 +967,11 @@ export default function PrimePathExport() {
                     <label className="block text-xs sm:text-sm font-medium mb-1 sm:mb-2">Phone Number</label>
                     <div className="flex">
                       <select value={countryCode} onChange={e => setCountryCode(e.target.value)} className="bg-slate-700/40 border border-blue-500/30 text-white rounded-l-xl px-2 py-2 focus:outline-none appearance-none text-xs sm:text-base">
-                        <option value="+234">🇳🇬 +234</option>
-                        <option value="+44">🇬🇧 +44</option>
-                        <option value="+1">🇺🇸 +1</option>
-                        <option value="+91">🇮🇳 +91</option>
-                        <option value="+27">🇿🇦 +27</option>
-                        <option value="+233">🇬🇭 +233</option>
-                        <option value="+225">🇨🇮 +225</option>
-                        <option value="+49">🇩🇪 +49</option>
-                        <option value="+33">🇫🇷 +33</option>
-                        <option value="+971">🇦🇪 +971</option>
-                        {/* Add more as needed */}
+                        {countryCodes.map((c) => (
+                          <option key={c.code + c.name} value={c.code}>
+                            {c.flag} {c.code}
+                          </option>
+                        ))}
                       </select>
                       <Input value={phone} onChange={e => setPhone(e.target.value)} className="bg-slate-700/40 border-blue-500/30 text-white rounded-r-xl flex-1" placeholder="Phone number" />
                     </div>
@@ -910,7 +1148,7 @@ export default function PrimePathExport() {
                 </div>
                 <div className="flex items-start text-slate-300">
                   <MapPin className="w-4 h-4 mr-2 mt-1" />
-                  <a href="https://maps.app.goo.gl/xybrjRG6DwBifHQ59?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="underline text-white hover:opacity-80 transition-opacity">Abuja, FCT, Nigeria</a>
+                  <a href="https://maps.app.goo.gl/xybrjRG6DwBifHQ59?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener noreferrer" className="underline text-white hover:opacity-80 transition-opacity text-sm sm:text-lg">Abuja, FCT, Nigeria</a>
                 </div>
               </div>
             </div>
@@ -929,7 +1167,7 @@ export default function PrimePathExport() {
               </div>
             </div>
             <div className="text-center text-slate-400 text-sm">
-              Copyright © 2024 Prime Path Export. All rights reserved.
+              Copyright © 2025 Prime Path Export. All rights reserved.
             </div>
           </div>
         </div>
